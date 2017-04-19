@@ -1,0 +1,10 @@
+﻿@model ContactMVC.Models.ContactMessage
+
+@{
+    ViewBag.Title = "Thank You";
+}
+
+<h2>Thank You</h2>
+<p>Thank you, @Model.name, for sending the message.</p>
+<p>@Html.ActionLink("Back to Contact form", "Index")</p>
+

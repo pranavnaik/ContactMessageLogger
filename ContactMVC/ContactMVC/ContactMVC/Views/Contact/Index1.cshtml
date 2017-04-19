@@ -1,0 +1,27 @@
+﻿@model ContactMVC.Models.ContactMessage
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm())
+        {
+
+            <p>@Html.LabelFor(m =>m.name) @Html.EditorFor(m =>m.name) @Html.ValidationMessageFor(m=>m.name)  <br /></p>
+            <p>@Html.LabelFor(m => m.email) @Html.EditorFor(m => m.email) @Html.ValidationMessageFor(m => m.email) <br /></p>
+            <input id="Submit1" type="submit" value="submit" />
+
+        }
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ContactMVC.Models.ContactMessage>
+
+@{
+    ViewBag.Title = "Contact Log Messages";
+}
+
+<h2>Contact Log Messages</h2>
+
+
+
+@foreach (var item in Model) {
+
+    <section>
+        <p>@Html.DisplayFor(modelItem => item.name) (@Html.DisplayFor(modelItem => item.email)) @Html.DisplayFor(modelItem => item.DateSent)</p>
+        <p>@Html.DisplayFor(modelItem => item.Subject)</p>
+        <p>@Html.DisplayFor(modelItem => item.Message)</p>
+    </section>
+    <hr />
+}
+
+
